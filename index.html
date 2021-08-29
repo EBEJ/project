@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Credit Card Validation</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</head>
+
+<body>
+        <div class="container-fluidframe">
+            <div class="creditCardForm">
+            <div class="card">
+                <div class="card-inner" id="cvvfocus">
+                   <div class="front">
+                        <form>
+                            <div class="CardQRAling">
+                                <img src="assets/images/chip.png" class="CardQRAlingInput" id="cardQR">
+                            </div>
+                            <div class="CardTypeAling">
+                                <img src="assets/images/visa.png" class="CardTypeAlingInput" id="cardType">
+                            </div>
+                            <div class="CardNumberAling" id="card-number-view">
+                                <input type="" class="CardNumberAlingInput" id="cardNumberView" value="####&nbsp;&nbsp;&nbsp;&nbsp;####&nbsp;&nbsp;&nbsp;&nbsp;####&nbsp;&nbsp;&nbsp;&nbsp;####" disabled=true>
+                            </div>
+                            <div>
+                                <span class="CardHolderLabelAling">
+                                    <label class="CardLabelFont2">Card Holder</label>
+                                </span>
+                                <span class="CardExpireLabelAling">
+                                    <label class="CardLabelFont2">Expires</label>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="CardHolderAling">
+                                    <input type="text" class="CardHolderAlingInput" id="cardHolderName" value="Full Name" disabled=true >
+                                </span>
+                                <span class="CardExpireAling">
+                                    <input type="text" class="CardExpireAlingInput" id="cardexpire" value="MM/YY" disabled=true>
+                                </span>
+                            </div>
+                        </form>
+                   </div>
+                   <div class="back">
+                        <div class="bar"></div>
+                        <div class="row cvvLabelview">
+                            <label>CVV</label>
+                        </div>
+                        <div class="row card-cvv">
+                            <div>
+                                <p id="CVVvalue"></p>
+                            </div>
+                        </div>
+                        <div class="row cardtypeview">
+                            <img src="assets/images/visa.png" width="40" id="cardtypeview">
+                        </div>
+                   </div>
+                </div>
+            </div>
+        
+                <div class="payment">
+                    <form>
+                        <div class="form-group" id="card-number-field">
+                            <label class="CardLabelFont">Card Number</label>
+                            <input type="number" class="form-control" id="cardNumber"  onkeyup="cardNumberCheck()">
+                        </div>
+                        <div class="form-group Name">
+                            <label class="CardLabelFont">Card Holder</label>
+                            <input class="form-control" type="textbox" id="cardName" onkeyup="cardNameCheck()">
+                        </div>
+                        <div>
+                            <span class="form-group" id="expiration-date">
+                                <label class="CardLabelFont">Expiration Date</label>
+                                <select  class="Expirecard" onchange="cardExpMonthCheck(this)">
+                                    <option id="Month">Month</option>
+                                    <option id="01">01</option>
+                                    <option id="02">02 </option>
+                                    <option id="03">03</option>
+                                    <option id="04">04</option>
+                                    <option id="05">05</option>
+                                    <option id="06">06</option>
+                                    <option id="07">07</option>
+                                    <option id="08">08</option>
+                                    <option id="09">09</option>
+                                    <option id="10">10</option>
+                                    <option id="11">11</option>
+                                    <option id="12">12</option>
+                                </select>
+                            </span>
+                            <span class="form-group">
+                                <label class="CardLabelFont">&nbsp;</label>
+                                <select class="Expirecard" onchange="cardExpYearCheck(this)">
+                                    <option id="Year">Year</option>
+                                    <option id="2020"> 2020</option>
+                                    <option id="2021"> 2021</option>
+                                    <option id="2022"> 2022</option>
+                                    <option id="2023"> 2023</option>
+                                    <option id="2024"> 2024</option>
+                                    <option id="2025"> 2025</option>
+                                    <option id="2026"> 2026</option>
+                                    <option id="2027"> 2027</option>
+                                    <option id="2028"> 2028</option>
+                                    <option id="2029"> 2029</option>
+                                    <option id="2030"> 2030</option>
+                                    <option id="2031"> 2031</option>
+                                </select>
+                            </span>
+                            <span class="form-group CVV">
+                                <label class="CardLabelFont">CVV</label>
+                                <input type="number" class="form-control" id="cvv"  onkeyup="cvvhover()" onblur="cvvhoverreturn()">
+                            </span>
+                    </div>
+                        <div class="form-group" id="pay-now">
+                            <button type="button" class="btn btn-default" id="confirm-purchase">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

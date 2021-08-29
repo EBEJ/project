@@ -1,0 +1,332 @@
+body {
+  font: normal 18px sans-serif;
+  background-color: #fff;
+  /* start */
+  max-height: 100vh;
+  /* end */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container-fluidframe {
+  /*Start*/
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 90vh;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  /*End*/
+  /*max-width: 1000px;
+  max-height: 800px;*/
+  background-color: #c6e7ec;
+  margin: auto;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.creditCardForm {
+  /*start*/
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+
+  /*end*/
+  width: 50%;
+  max-width: 1000px;
+  background-color: #fff;
+  margin: auto;
+  /* overflow: hidden; */
+  padding: 25px;
+  border-radius: 15px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.card {
+  position: relative;
+  z-index: 10000000;
+}
+
+.creditCardForm label {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.creditCardForm .payment {
+  top: 30%;
+  float: left;
+  font-size: 18px;
+  padding: 10px 25px;
+  margin-top: 20px;
+  position: absolute;
+  z-index: 100000000;
+}
+
+.creditCardForm .payment .form-group {
+  float: left;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.creditCardForm .payment .form-control {
+  line-height: 40px;
+  height: 10mm;
+  padding: 0 16px;
+}
+
+.creditCardForm .Name {
+  width: 100%;
+  margin-right: 10px;
+}
+
+.creditCardForm .CVV {
+  width: 32mm;
+}
+
+.creditCardForm .Expirecard {
+  font-size: 12px;
+  width: 32mm;
+  padding: 0;
+}
+
+.creditCardForm #card-number-field {
+  width: 100%;
+}
+
+.creditCardForm #expiration-date {
+  width: 30%;
+  margin-right: 15px;
+}
+
+.creditCardForm #credit_cards {
+  width: 50%;
+  margin-top: 25px;
+  text-align: right;
+}
+
+.creditCardForm #pay-now {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.creditCardForm .payment .btn {
+  width: 100%;
+  height: 8mm;
+  margin-top: 3px;
+  font-size: 12px;
+  background-color: #2e45c4;
+  color: white;
+}
+
+.creditCardForm .payment select {
+  padding: 10px;
+  margin-right: 15px;
+}
+
+.transparent {
+  opacity: 0.2;
+}
+
+@media (max-width: 650px) {
+  .creditCardForm .Name,
+  .creditCardForm .CVV,
+  .creditCardForm #expiration-date,
+  .creditCardForm #credit_cards {
+    width: 100%;
+  }
+  .creditCardForm #credit_cards {
+    text-align: left;
+  }
+}
+
+.card {
+  position: absolute;
+  top: -25%;
+  left: 15%;
+  width: 330px;
+  height: 220px;
+  max-width: 350px;
+  margin: 20px auto;
+  padding: 20px;
+  color: #fff;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -10%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/6.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  padding: 20px 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 1;
+  backface-visibility: hidden;
+
+  filter: drop-shadow(-10%);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.bar {
+  background: #222;
+  margin-left: -30px;
+  margin-right: -30px;
+  height: 60px;
+  margin-top: 10px;
+}
+
+.card-cvv {
+  margin-top: 20px;
+}
+
+.card-cvv div {
+  flex: 1;
+}
+
+.card-cvv p {
+  height: 30px;
+  background: #fff;
+  color: #000;
+  font-size: 10px;
+  padding: 10px 15px;
+  text-align: right;
+  -webkit-text-security: disc;
+}
+
+.CardLabelFont {
+  font-size: 10px;
+  color: #3b3b3b;
+}
+
+.CardLabelFont2 {
+  font-size: 8px;
+  color: #dddddd;
+}
+
+.CardHolderAling {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+.CardExpireAling {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+.CardHolderLabelAling {
+  position: absolute;
+  bottom: 40px;
+  left: 15px;
+}
+
+.CardExpireLabelAling {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+.CardNumberAling {
+  position: absolute;
+  bottom: 50%;
+}
+.CardTypeAling {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.CardQRAling {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.CardQRAling {
+  width: 20mm;
+  height: 10mm;
+  background-color: transparent;
+}
+
+.CardQRAlingInput {
+  width: 12mm;
+  background-color: transparent;
+  color: #fff;
+  position: relative;
+}
+.CardTypeAlingInput {
+  width: 12mm;
+  background-color: transparent;
+  color: #fff;
+  position: relative;
+}
+
+.CardNumberAlingInput {
+  width: 6.8cm;
+  height: 5mm;
+  background-color: transparent;
+  color: #fff;
+}
+
+.CardHolderAlingInput {
+  width: 6cm;
+  background-color: transparent;
+  color: #fff;
+  font-size: 4mm;
+}
+
+.CardExpireAlingInput {
+  width: 2cm;
+  background-color: transparent;
+  color: #fff;
+  font-size: 4mm;
+}
+
+.cardtypeview {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.cvvLabelview {
+  position: absolute;
+  bottom: 45%;
+  right: 30px;
+  font-size: 10px;
+}
