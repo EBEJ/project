@@ -85,6 +85,10 @@ input::-webkit-inner-spin-button {
   line-height: 40px;
   height: 10mm;
   padding: 0 16px;
+  width: 85%;
+  border-radius: 5px;
+  border-style: none;
+  border: 0.5px solid gray;
 }
 
 .creditCardForm .Name {
